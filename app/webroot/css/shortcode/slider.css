@@ -1,0 +1,119 @@
+/* ====================================
+
+	Template: Flim Studio
+
+======================================== */
+
+.slider-area {
+  display: block;
+  position: relative;
+}
+.slide-table {
+  display: table;
+  height: 100%;
+}
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.slide-content {
+  margin-bottom: 285px;
+  margin-top: 320px;
+}
+.slide-content h2 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 13px;
+  animation-delay: 0.8s;
+}
+.slide-content h1 {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0 0 40px;
+  animation-delay: 1.2s;
+}
+.slide-content h2  span,.slide-content h1  span{color:#0c2461;}
+.slide-btn a {
+  background: #0c2461 none repeat scroll 0 0;
+  box-shadow: 0 0 1px transparent;
+  color: #fff;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transform: perspective(1px) translateZ(0px);
+  transform-origin: 0 100% 0;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  vertical-align: middle;
+  width: 130px;
+  animation-delay: 1.6s;
+  transition:.3s;
+}
+.slide-btn a:hover{
+-webkit-transform: skew(-10deg);
+  transform: skew(-10deg);
+  background:#000;
+  color:#fff;
+}
+
+/* Slider Dot Css */
+.slider-area .owl-theme .owl-nav.disabled + .owl-dots {
+  bottom: 0;
+  margin-bottom: 90px;
+  margin-top: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.slider-area .owl-theme .owl-dots .owl-dot span {
+  backface-visibility: visible;
+  background: rgba(0, 0, 0, 0) url("../../img/home-one/icon/dot.png") no-repeat scroll 0 0;
+  border-radius: 0;
+  display: block;
+  height: 20px;
+  margin: 0 20px 0 0;
+  transition: opacity 0.2s ease 0s;
+  width: 20px;
+}
+.slider-area .owl-theme .owl-dots .owl-dot.active span{
+  background: rgba(0, 0, 0, 0) url("../../img/home-one/icon/dot-active.png") no-repeat scroll 0 0;
+  width:25px;
+  height:25px;
+}
+.slider-area .owl-theme .owl-nav.disabled + .owl-dots::after {
+  background: #4b5459 none repeat scroll 0 0;
+  bottom: 10px;
+  content: "";
+  height: 1px;
+  left: -27px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 85px;
+}
+
+/* Slider Animation Css */
+.slide-content *{
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards ;
+  animation-fill-mode: backwards ;
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown; }
+.active .slide-content h2{
+  -webkit-animation-name: lightSpeedIn;
+  animation-name: lightSpeedIn;
+}
+.active .slide-content h1 {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+.active .slide-content .slide-btn a {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
